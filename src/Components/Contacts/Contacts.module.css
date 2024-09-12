@@ -1,0 +1,216 @@
+.contactUsSection{
+    margin-top: 50px;
+}
+
+.contactUsSection .container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+
+.contactForm{
+    margin-left: 10px;
+    padding: 60px 30px;
+    padding-bottom: 30px;
+    width: 300px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #92E3A9;
+    border-radius: 15px;
+    transform: translateX(-100%);
+    transition: transform 1.5s;
+}
+
+.contactForm.slideIn{
+    transform: translateX(0%);
+}
+
+.mailBackground{
+    position: absolute;
+    padding: 8px;
+    width: 95px;
+    height: 65px;
+    top: -35px;
+    border: 2px solid #92E3A9;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.mailIcon{
+    width: 90px;
+    margin-top: -12px;
+}
+
+.contactUsSection input{
+    margin: 10px;
+    background-color: #cdf8d9;
+    padding-left: 10px;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width:270px;
+    color: black;
+}
+
+.contactMethod{
+    margin: 10px;
+    background-color: #cdf8d9;
+    padding-left: 5px;
+    border: none;
+    border-radius: 5px;
+    height: 45px;
+    width:284px;
+    color: #6e6e6e;
+
+}
+
+.contactMethod option{
+    background-color: white;
+}
+
+.message{
+    margin: 10px;
+    background-color: #cdf8d9;
+    padding-left: 5px;
+    border: none;
+    border-radius: 5px;
+    width:278px;
+    height: 80px;
+    color: #6e6e6e;
+}
+
+.submitButton{
+    width: 100px;
+    padding: 10px;
+    background-color: #92E3A9;
+    font-size: 15px;
+    color: #000000;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.submitButton:hover,
+.submitButton:active{
+    background-color: #669a75;
+    color:rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.submitButton.inactiveButton{
+    background-color: #fdfdc0;
+}
+
+.contacts{
+    margin-top: 40px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.51);
+}
+
+.mail,
+.phone{
+    margin: 2px;
+    font-size: 20px;
+}
+
+.mail a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.69);
+}
+
+.phone a{
+    color: #000000;
+}
+
+.locationsContainer{
+    width: 60%;
+    padding-left: 20px;
+    display: flex;
+    column-gap: 10px;
+    row-gap: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.location{
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 5px;
+}
+
+.location svg
+{
+    width: 20px;
+    height: 20px;
+}
+
+.address{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
+    transition: all ease-in-out 1s;
+}
+
+.address:hover{
+    color: #91e2a8;
+}
+
+.locations{
+    padding-left: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    column-gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.map{
+    width: 90%;
+    height: 450px;
+    border: 0;
+}
+
+@media screen and (max-width: 983px) {
+
+    .locationsContainer{
+        width: 80%;
+    }
+
+    .map{
+        height: 300px;
+    }
+
+    .locationsContainer{
+        padding-left: 0;
+    }
+
+    .contactForm{
+        margin-top: 0;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .contactForm{
+        margin-top: 0;
+        width: 250px;
+        margin: auto;
+    }
+
+}

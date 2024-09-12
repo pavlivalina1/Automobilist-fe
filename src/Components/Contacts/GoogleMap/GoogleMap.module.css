@@ -1,0 +1,11 @@
+.map{
+    position: relative;
+    width: 600px;
+    height: 450px;
+}
+
+@media screen and (max-width: 770px) {
+    .map{
+        width: 280px;
+    }
+}

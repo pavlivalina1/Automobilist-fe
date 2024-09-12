@@ -1,0 +1,68 @@
+
+.magnetWrap{
+    position: fixed;
+    top: 23vw;
+    left: 0;
+    z-index: 1000;
+}
+
+
+.magnet{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.8194vw;
+    height: 19.375vw;
+    background: #f5f55e;
+    border-radius: 0 1.3888vw 1.3888vw 0;
+    cursor: pointer;
+    transition: .5s;
+}
+
+
+.magnetLink{
+    display: block;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.25vw;
+    line-height: 1.7361vw;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    color: #000000;
+    white-space: nowrap;
+    transform: rotate(-90deg);
+    padding: 2.0833vw 1.0416vw;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.magnet:hover {
+    background-color: #3b3b3b;
+}
+
+.magnet:hover > .magnetLink {
+    color: white;
+}
+
+
+@media screen and (max-width: 768px) {
+    .magnetWrap{
+        width: 100%;
+        top: auto;
+        bottom: 0;
+    }
+
+    .magnet{
+        width: 100%;
+        height: max-content;
+        border-radius: 0;
+    }
+
+    .magnetLink{
+        font-size: 4.375vw;
+        line-height: 5.9375vw;
+        transform: rotate(0deg);
+        padding: 3.125vw 0;
+    }
+
+}

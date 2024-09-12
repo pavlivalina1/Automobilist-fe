@@ -1,0 +1,291 @@
+.discountsTitle{
+    margin-top: 60px;
+    font-weight: 700;
+    color: #055e05;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.discountCard {
+    margin: auto;
+    padding: 0;
+    border: 0;
+    outline: none;
+    font-size: 0;
+    width: 100%;
+    max-width: 1200px;
+    text-align: left;
+    margin-bottom: 60px;
+}
+.discountCard > input {
+    position: absolute;
+    left: -9999px;
+}
+
+.discountCard > label {
+    position: relative;
+    display: inline-block;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.1s;
+    -o-transition: all 0.1s;
+    -ms-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    padding: 0 20px;
+    font-size: 17px;
+    line-height: 49px;
+    margin: 0 5px 5px 0;
+    border-radius: 5px;
+    background: #eae9e9;
+    box-shadow: 0 2px rgba(0,0,0,0.2);
+    color: #000000;
+    opacity: 0.8;
+}
+
+.discountCard > input:checked + label {
+    cursor: default;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+    background: #ffffff;
+    -webkit-box-shadow: 0px -10px 18px -9px rgba(148,145,148,0.66);
+    -moz-box-shadow: 0px -10px 18px -9px rgba(148,145,148,0.66);
+    box-shadow: 0px -10px 18px -9px rgba(148,145,148,0.66);
+    z-index: 1;
+    border-bottom: none;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    color: #055e05;
+    opacity: 1;
+}
+
+.discountCard > label:hover {
+    background: #fff;
+    opacity: 1;
+}
+
+
+.discountCard > ul {
+    background: #fff;
+    text-align: left;
+    list-style: none;
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    font-size: 13px;
+    border-radius: 5px;
+    box-shadow:  20px 20px 60px #d9d9d9;
+}
+
+
+.discountCard > ul > li {
+    position: absolute;
+    width: 100%;
+    padding: 30px 40px 40px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    opacity: 0;
+    transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.discountCard > .tabContent1:checked ~ ul .tabContent1,
+.discountCard > .tabContent2:checked ~ ul .tabContent2
+{
+    z-index: 1;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+    -webkit-transform: scale(1,1);
+    -webkit-transform: rotate(0deg);
+}
+
+
+
+
+.discountCard > .tabContent1:checked ~ ul {
+    border-top-left-radius: 0;
+}
+
+
+.discountCardAnimation > ul > li {
+    -webkit-transform: scale(0.1,0.1);
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+    .discountCard > label {
+        display: block;
+    }
+    .discountCard > .right {
+        float: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .discountCard > label {
+        margin-right: 0;
+    }
+    .discountCard > input:checked + label {
+        margin-bottom: 5px;
+        padding-bottom: 0;
+        border-radius: 5px;
+    }
+    .discountCard > .tabContent1:checked ~ ul {
+        border-top-left-radius: 0;
+    }
+}
+
+.tab-content .textBlock{
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.textBlock h1{
+    margin-bottom: 0;
+    font-size: 35px;
+}
+
+.textBlock p {
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.textBlock ul{
+    display: flex;
+    column-gap: 10px;
+    padding: 10px 0;
+
+}
+
+
+
+.textBlock ul li{
+    background-color: rgba(200, 239, 211, 0.72);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+}
+
+.textBlock ul li .category{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.textBlock ul li div{
+    background-color: rgba(89, 162, 108, 0.72);
+    padding: 8px;
+    border-radius: 5px;
+
+}
+
+.crossed{
+    text-decoration: line-through;
+}
+
+
+
+.discountCard > ul,
+.discountCard > ul > li {
+    height: 370px;
+}
+
+
+
+.discountImage{
+    width: 40%;
+    max-width: 300px;
+    height: 100%;
+
+}
+
+@media screen and (max-width: 1260px) {
+    .discountCard > .tabContent1:checked ~ ul .tabContent1,
+    .discountCard > .tabContent2:checked ~ ul .tabContent2
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .discountCard > ul,
+    .discountCard > ul > li {
+        height: 650px;
+    }
+
+    .discountCard{
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 1160px) {
+    .discountCard{
+        width: 95%;
+    }
+
+    .textBlock{
+        width: 100%;
+    }
+    .textBlock ul{
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .textBlock ul li{
+        flex-direction: row;
+        column-gap: 10px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .category{
+        width: 50%;
+        text-align: left;
+    }
+    .discountCard > ul,
+    .discountCard > ul > li {
+        height: 1020px;
+    }
+
+
+    .discountImage{
+        width: 250px;
+        height: 250px;
+
+    }
+
+
+}
+
+@media screen and (max-width: 430px) {
+    .discountCard > ul > li {
+        padding: 30px 10px 40px;
+    }
+
+    .textBlock ul li .category{
+        font-size: 18px;
+    }
+
+    .retrain{
+        font-size: 18px;
+    }
+
+}

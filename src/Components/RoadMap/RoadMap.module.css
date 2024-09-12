@@ -1,0 +1,119 @@
+.roadMapWrapImg{
+    display: flex;
+    justify-content: center;
+    /*outline: 1px solid tomato;*/
+    padding: 45px 0;
+}
+
+.figureImg{
+    /*outline: 1px solid tomato;*/
+    position: relative;
+}
+
+
+/*.roadMapItem{*/
+/*    position: absolute;*/
+/*    top: 15px;*/
+/*    left: -15px;*/
+/*    width:75px;*/
+/*    z-index: 5;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    gap: 30px;*/
+/*}*/
+
+/*.roadMapBoxItem{*/
+/*    position: relative;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    flex-direction: column;*/
+/*}*/
+
+h2,h3,p{
+    margin: 0;
+}
+
+/*.roadMapBoxItem::before{*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: -4px;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    width: 75px;*/
+/*    height: 75px;*/
+/*    margin: auto;*/
+/*    border-radius: 10px;*/
+/*    background: #ffffff;*/
+/*    transform: rotate(45deg);*/
+/*    border: 5px solid #ffde59;*/
+/*    box-shadow: 0 0 0 3px #3b3b3b inset, 3px 3px 6px rgba(59, 59, 59, 0.3);*/
+/*    z-index: -1;*/
+/*}*/
+
+/*.roadMapItemTitle{*/
+/*    font-size: 12px;*/
+/*    text-align: center;*/
+/*}*/
+
+.carIcon{
+    position: absolute;
+    top: 3px;
+    left: -124px;
+}
+
+.carSmoke{
+    position: absolute;
+    left: -80px;
+    top: -15px;
+    transform: rotateY(180deg);
+}
+
+.trafickLight{
+    position: absolute;
+    top: -50px;
+    left: 580px;
+}
+
+.carImg{
+    transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 754px){
+    .roadImg{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 754px){
+    .carIcon{
+        top: 0px;
+    }
+    .carImg{
+        width: 100px;
+    }
+    .carSmoke{
+        width: 75px;
+        left:-80px;
+    }
+    .trafickLight{
+        top: -30px;
+        left: 140px;
+        width: 35px;
+    }
+    .carIcon{
+        top:-15px;
+        left: -80px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .carImg{
+        opacity: 1;
+        /*margin-left: 20px;*/
+    }
+    .carSmoke{
+        opacity: 0;
+    }
+}

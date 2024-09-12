@@ -1,0 +1,59 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');*/
+
+@font-face {
+  font-family: 'Intro Regular';
+  src: url('fonts/intro_regular.ttf') format('opentype');
+
+}
+
+body {
+  margin: 0;
+  /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',*/
+  /*  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',*/
+  /*  sans-serif;*/
+  font-family: 'Intro Regular', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.react-tabs__tab{
+  width: 22%;
+}
+
+
+@media screen and (max-width: 867px){
+  .react-tabs__tab{
+    font-size: 18px;
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 537px){
+  .react-tabs__tab{
+    font-size: 12px;
+    width: 16%;
+  }
+}
+
+.react-tabs{
+  color: #055e05;
+}
+
+li.react-tabs__tab--selected{
+  color: #006000;
+  font-weight: 700;
+}
+
+.heroBg{
+  background-image: linear-gradient(
+          rgba(82, 82, 82, 0.6),
+          rgba(128, 128, 128, 0.6)
+  ), url("img/heroBackground.jpeg");
+  background-size: cover;
+}
+

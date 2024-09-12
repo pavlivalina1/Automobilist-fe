@@ -1,0 +1,70 @@
+.roadMapItem{
+    position: absolute;
+    top: 15px;
+    left: -15px;
+    width:75px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.roadMapItem:hover{
+    cursor: pointer;
+}
+
+.roadMapBoxItem{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h2,h3,p{
+    margin: 0;
+}
+
+.roadMapBoxItem::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -17px;
+    right: 0;
+    bottom: 0;
+    width: 75px;
+    height: 75px;
+    margin: auto;
+    border-radius: 50% 40px 5px 40px;
+    background: #ffffff;
+    transform: rotate(45deg);
+    border: 5px solid #ffde59;
+    box-shadow: 0 0 0 3px #3b3b3b inset, 3px 3px 6px rgba(59, 59, 59, 0.3);
+    z-index: -1;
+    transition: all ease-in-out 1s;
+}
+
+.roadMapBoxItem:hover::before{
+    background: #fddd59;
+}
+
+
+
+.roadMapItemTitle{
+    font-size: 12px;
+    text-align: center;
+    color: #000;
+    background-color: white;
+    position: relative;
+    left: -28px;
+    padding: 5px 10px;
+    border-radius: 0 20px 20px 0;
+    transition: all ease-in-out 1s;
+    border: 5px solid #ffde59;
+    border-left: none;
+}
+
+.roadMapItem:hover .roadMapItemTitle {
+    background-color: #fddd59;
+}

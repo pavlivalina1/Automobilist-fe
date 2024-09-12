@@ -1,0 +1,197 @@
+.priceTitle{
+    margin-top: 60px;
+    font-weight: 700;
+    color: #055e05;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container{
+    margin: auto;
+    width: 90%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center ;
+    column-gap: 60px;
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .container{
+        justify-content: center;
+        align-items: center;
+
+    }
+
+}
+
+.container .card{
+    position: relative;
+    cursor: pointer;
+
+}
+
+.container .card .face{
+    width: 320px;
+    height: 220px;
+    transition: 0.5s;
+
+}
+
+.container .card .face.face1{
+    position: relative;
+    background: #ececec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(120px);
+}
+
+.container .card:hover .face.face1{
+    background: #92E3A9;
+    transform: translateY(0);
+}
+
+.container .card .face.face1 .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.container .card:hover .face.face1 .content{
+    opacity: 1;
+}
+
+.container .card .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #000000;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.container .card .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(161, 160, 160, 0.8);
+    transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+.container .card .face.face2 .content p{
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container .card .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.container .card .face.face2 .content a:hover{
+    background: #333;
+    color: #fff;
+}
+
+.discounts{
+    position: absolute;
+    top: -10px;
+    right: -27px;
+}
+
+.discContainer{
+    position: relative;
+}
+
+.discounts img{
+    width: 180px;
+    height: 100px;
+}
+
+.discountsText{
+    position: absolute;
+    top:25px;
+    right: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 5px;
+}
+
+.discountsText .christmas,
+.veteran{
+  color: white;
+}
+
+.cardImg{
+    margin: auto;
+    width: 120px;
+    height: 120px;
+}
+
+.btnContainer {
+    width: 200px;
+    height: 100%;
+    margin: 0 auto 0;
+    background: #fff;
+}
+
+.pulseButton {
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 50px;
+    font-size: 17px;
+    font-weight: lighter;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 50px;
+    letter-spacing: -1px;
+    color: #000000;
+    border: none;
+    border-radius: 15px;
+    background: #f5f55e;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgb(245, 245, 94, .5);
+    -webkit-animation: pulse 1.5s infinite;
+    text-decoration: none;
+}
+.pulseButton:hover {
+    -webkit-animation: none;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 50px rgba(90, 153, 212, 0);
+    }
+    100% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
+    }
+}

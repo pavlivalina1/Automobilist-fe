@@ -1,0 +1,7 @@
+.animateSection{
+    overflow: hidden;
+    background-size: contain;
+    background-image: url("https://i.pinimg.com/736x/fa/ff/5e/faff5e0a02e8748b088c8d547ef231bc.jpg");
+    background-repeat: repeat-x;
+    height: 30px;
+}

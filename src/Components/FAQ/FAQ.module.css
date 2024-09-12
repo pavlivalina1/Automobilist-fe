@@ -1,0 +1,277 @@
+
+.faqSection{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container {
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 50px 70px 70px 70px;
+    width: 50%;
+    border-radius: 35px;
+    background: #ffffff;
+    box-shadow:  20px 20px 60px #d9d9d9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.accordion{
+    width: 73%;
+}
+
+.accordionItem {
+    border-bottom: 1px solid lightgray;
+}
+
+button {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+    color: rgb(145, 226, 168);
+    font-size: 1rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+button:hover {
+    color: rgb(49, 238, 102);
+}
+
+button .accordionTitle {
+    padding: 1em 1.5em 1em 0;
+    white-space: pre;
+}
+
+button .icon {
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid;
+    border-radius: 22px;
+}
+
+button .icon::before {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 10px;
+    left: 6px;
+    width: 11px;
+    height: 2px;
+    background: currentColor;
+}
+
+button .icon::after {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 6px;
+    left: 10px;
+    width: 2.5px;
+    height: 10px;
+    background: currentColor;
+}
+
+button[aria-expanded='true'] {
+    color: black;
+}
+
+button[aria-expanded='true'] .icon::after {
+    width: 0;
+}
+
+.accordionContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 200ms linear;
+    will-change: max-height;
+}
+
+.accordionContent.expanded {
+    opacity: 1;
+    max-height: 26em;
+    color: #000000;
+    margin-top: 15px;
+}
+
+
+.FaqTitle{
+    margin: auto;
+    width: 40px;
+    font-size: 18px;
+}
+
+.carSchoolImg{
+    position: absolute;
+    top: 0;
+    left: -100px;
+    border-radius: 50px;
+    width: 350px;
+    height: 350px;
+    margin-top: 20px;
+}
+
+.moreQuestions{
+    padding-top: 30px;
+    width: 30%;
+    height: 450px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.moreQuestions img{
+    margin-top: -70px;
+    margin-left: 40px;
+    width:250px;
+    height: 250px;
+    transform: rotate(110deg);
+}
+
+.moreQuestions p{
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.56);
+}
+
+.contactBlock{
+    margin-top: -20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.chatUs{
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #fcfc9e;
+    border-radius: 15px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.callUs{
+    padding: 10px 20px;
+    width: 160px;
+    text-align: center;
+    background-color: #fcfc9e;
+    border-radius: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+
+.chatUs:hover,
+.callUs:hover{
+    background-color: #3b3b3b;
+    color: white;
+}
+
+.callUs:hover > a{
+    color: white;
+}
+
+
+.callUs a{
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (max-width: 1260px) {
+    .faqSection{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .moreQuestions{
+        margin-top: -120px;
+        width: 80%;
+        flex-direction: row;
+        align-items: center;
+    }
+    .moreQuestions img{
+        transform: scaleX(-1) rotate(220deg);
+        margin-left: -80px;
+        margin-top: 30px;
+    }
+
+}
+
+@media screen and (min-width: 1493px) {
+    .moreQuestions img{
+        margin-top: -40px;
+        margin-left: 80px;
+        transform: rotate(110deg);
+    }
+}
+
+
+@media screen and (max-width: 1100px) {
+    .container {
+        padding: 5px 10px 30px 10px;
+        width: 80%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+    }
+
+    .carSchoolImg{
+        position: initial;
+        border-radius: 50px;
+        width: 70%;
+        height: auto;
+
+    }
+
+    .accordion{
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 880px) {
+    .moreQuestions{
+        margin-top: 0px;
+        width: 100%;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .moreQuestions img{
+        transform: rotate(140deg);
+        margin-left: 180px;
+        margin-top: -40px;
+    }
+    .moreQuestions p{
+        text-align: center;
+    }
+
+    .accordionTitle{
+        font-size: 11px;
+    }
+
+}
+
+.accordionItem {
+    touch-action: manipulation;
+}
